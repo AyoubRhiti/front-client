@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div>
+  <mat-card>
+    <mat-card-content>
+      <mat-grid-list cols="2" rowHeight="9:1" [gutterSize]="'20px'">
+
+        <mat-grid-tile colspan="2" rowspan="3">
+            <mat-label class="s">Choisir le service souhaité</mat-label>
+            <mat-select placeholder="Services offerts" appearence="outline">
+              <mat-option [value]="10">Ouverture un compte personnel</mat-option>
+              <mat-option [value]="10">Clôture du compte bancaire</mat-option>
+              <mat-option [value]="10">Le relevé de compte mensuel</mat-option>
+              <mat-option [value]="10">La fourniture d'un RIB</mat-option>
+              <mat-option [value]="20" >Paiement de factures</mat-option>
+              <mat-option [value]="50">Paiement par prélèvement ou virement bancaire</mat-option>
+              <mat-option [value]="100">Service bancaire par téléphone ou par Internet</mat-option>
+            </mat-select>
+          </mat-grid-tile>
+
+          <!--<mat-grid-tile colspan="2" rowspan="3">
+              <mat-form-field>
+                <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <ngx-mat-datetime-picker #picker></ngx-mat-datetime-picker>
+              </mat-form-field>
+          </mat-grid-tile>
+
+          <mat-grid-tile colspan="2" rowspan="3">
+              <mat-label class="s">Choisir la date</mat-label>
+              <input matInput [matDatepicker]="picker" class="a"/>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              
+          </mat-grid-tile>
+
+          <mat-grid-tile colspan="2" rowspan="3">
+            <mat-label class="s">Choisir l'heure</mat-label>
+            <mat-timepicker></mat-timepicker>
+          </mat-grid-tile>-->
+        
+          <mat-grid-tile colspan="2" rowspan="3">
+            <div class="rdv" fxFlex fxLayoutAlign="flex-end">
+              <button type="submit" mat-raised-button color="primary">
+                Valider votre rendez-vous
+              </button>
+            </div>
+          </mat-grid-tile>
+          
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>
