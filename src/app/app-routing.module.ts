@@ -45,7 +45,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   { 
-    path:'rdv', 
+    path:'compte/:id/rdv', 
     component: RdvComponent,
     canActivate: [AuthGuardService],
   },

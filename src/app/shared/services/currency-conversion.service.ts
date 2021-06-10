@@ -13,7 +13,7 @@ export const InterceptorSkipHeader = new HttpHeaders({
 export class CurrencyConversionService {
   private rateUrl: string;
   endpoint = 'convert';
-  access_key = 'QDvUsOKj0grjzbYGAiFdGaPH';
+  access_key = 'GpK3N8ueM4Qk182wLdUIoMWx';
   baseURL = 'https://www1.oanda.com/rates/api/v2/rates/spot.json';
 
   constructor(private http: HttpClient) {}

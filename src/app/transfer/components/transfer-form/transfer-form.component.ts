@@ -52,13 +52,14 @@ export class TransferFormComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.numero.value)
     this.accountService.findAccountNum(this.numero.value).subscribe(
       (data) => {
         //get l account lash bghit nsift
         this.account2 = data;
         this.devise2 = this.account2.devise.code;
-
-        this.currencyService.getRate(this.devise1, this.devise2).subscribe(
+        
+        this.currencyService.getRate("EUR", "USD").subscribe(
           (data) => {
             //get the rate
             this.rates = data;

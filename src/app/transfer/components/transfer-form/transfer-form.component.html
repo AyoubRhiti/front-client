@@ -8,7 +8,8 @@
             <mat-form-field appearance="outline" class="a">
               <mat-label>Envoyé à</mat-label>
               <mat-icon matPrefix class="icon-prefix-padding">person</mat-icon>
-              <input matInput type="text" placeholder="Entrer le numéro du destinataire">
+              <input matInput type="text" placeholder="Entrer le numéro du destinataire" formControlName="numero"
+              >
               <mat-error *ngIf="accountNotFound">
                 Entrez un numero de compte valide.
               </mat-error>
@@ -19,7 +20,7 @@
             <mat-form-field appearance="outline" class="b">
               <mat-label id="label">Somme envoyée</mat-label>
               <mat-icon matPrefix class="icon-prefix-padding">euro_symbol</mat-icon>
-              <input matInput type="text" placeholder="Entrer la somme à envoyer XX.XX">
+              <input matInput type="text" placeholder="Entrer la somme à envoyer XX.XX" formControlName="somme">
             </mat-form-field>
           </mat-grid-tile>
 

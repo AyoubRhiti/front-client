@@ -16,6 +16,7 @@
               <mat-option [value]="100">Service bancaire par téléphone ou par Internet</mat-option>
             </mat-select>
           </mat-grid-tile>
+          
 
           <!--<mat-grid-tile colspan="2" rowspan="3">
               <mat-form-field>
@@ -23,7 +24,7 @@
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <ngx-mat-datetime-picker #picker></ngx-mat-datetime-picker>
               </mat-form-field>
-          </mat-grid-tile>
+          </mat-grid-tile>-->
 
           <mat-grid-tile colspan="2" rowspan="3">
               <mat-label class="s">Choisir la date</mat-label>
@@ -34,6 +35,19 @@
           </mat-grid-tile>
 
           <mat-grid-tile colspan="2" rowspan="3">
+            <mat-label class="s">Choisir l'heure souhaité</mat-label>
+            <mat-select placeholder="heure" appearence="outline">
+              <mat-option [value]="12">12</mat-option>
+              <mat-option [value]="13">13</mat-option>
+              <mat-option [value]="14">14</mat-option>
+              <mat-option [value]="15">15</mat-option>
+              <mat-option [value]="16" >16</mat-option>
+              <mat-option [value]="17">17</mat-option>
+              <mat-option [value]="18">18</mat-option>
+            </mat-select>
+          </mat-grid-tile>
+
+         <!-- <mat-grid-tile colspan="2" rowspan="3">
             <mat-label class="s">Choisir l'heure</mat-label>
             <mat-timepicker></mat-timepicker>
           </mat-grid-tile>-->

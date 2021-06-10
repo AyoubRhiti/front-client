@@ -7,6 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { Recharge } from 'src/app/recharge/model/recharge';
 import { RechargeService } from 'src/app/recharge/service/recharge.service';
+import { Rdv } from 'src/app/rdv/model/rdv';
 
 @Component({
   selector: 'app-transfer-list',
@@ -36,9 +37,25 @@ export class TransferListComponent implements OnInit {
     'somme',
     'date',
   ];
+  
+
   @ViewChild(MatPaginator, { static: true }) paginator2: MatPaginator;
+  //Rendez-vous
+  RDV: Rdv[];
+  dataSource3 = new MatTableDataSource<Rdv>(this.RDV);
+  displayedColumns3: string[] = [
+    'client',
+    'date rendez-vous',
+    'heure rendez-vous',
+    
+  ];
+  @ViewChild(MatPaginator, { static: true }) paginator3: MatPaginator;
+
+
+
 
   constructor(
+    // ajouter rdv service 
     private transferService: TransferService,
     private rechargeService: RechargeService,
     private router: Router,

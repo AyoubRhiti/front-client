@@ -13,7 +13,9 @@ export class AccountService {
   }
 
   public findAccountNum(id: string): Observable<Account> {
+    console.log(id);
     return this.http.get<Account>(this.accountUrl + '/' + id);
+    
   }
   public findAccountId(id: string): Observable<Account[]> {
     return this.http.get<Account[]>(this.accountUrl + 's?id=' + id);
